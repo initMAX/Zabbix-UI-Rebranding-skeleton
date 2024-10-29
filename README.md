@@ -1,93 +1,207 @@
-# Zabbix-UI-Rebranding-skeleton
+<!-- *********************************************************************************************************************************** -->
+<!-- *** HEADER ************************************************************************************************************************ -->
+<!-- *********************************************************************************************************************************** -->
+<div align="center">
+    <a href="http://www.initmax.com"><img src="./.readme/logo/initMAX_banner.png" alt="initMAX Logo"></a>
+    <h3>
+        <span>
+            Honesty, diligence and MAXimum knowledge of our products is our standard.
+        </span>
+    </h3>
+    <h3>
+        <a href="https://www.initmax.com/">
+            <img alt="Static Badge" src="https://img.shields.io/badge/initMAX.com-%20?color=%231f65f4&logo=data:image/png;base64,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">
+        </a>&nbsp;
+        <a href="https://www.linkedin.com/company/initmax/">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=linkedin">
+        </a>&nbsp;
+        <a href="https://www.youtube.com/@initmax1">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-web?style=social&logo=youtube">
+        </a>&nbsp;
+        <a href="https://www.facebook.com/initmax">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=facebook">
+        </a>&nbsp;
+        <a href="https://www.instagram.com/initmax/">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=instagram">
+        </a>&nbsp;
+        <a href="https://twitter.com/initmax">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=x">
+        </a>&nbsp;
+        <a href="https://github.com/initmax">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=github">
+        </a>
+    </h3>
+    <h3>
+        <a><img src="./.readme/logo/zabbix-premium-partner.png" alt="Zabbix premium partner" width="100"></a>&nbsp;&nbsp;&nbsp;
+        <a><img src="./.readme/logo/zabbix-certified-trainer.png" alt="Zabbix certified trainer" width="100"></a>
+    </h3>
+</div>
+<br>
+<br>
 
+---
+---
+<div align="center">
+    <h1> <!-- !!! change !!! -->
+        How to Rebrand Zabbix
+    </h1>
+    <h4>
+        Customizing Logos and System Appearance <!-- !!! change !!! -->
+    </h4>
+    <br>
+    <img src="./.readme/screen/rebranding.webp" width="500"> <!-- !!! change !!! -->
+</div>
+<br>
+<br>
 
+<!-- *********************************************************************************************************************************** -->
+<!-- *** BODY ************************************************************************************************************************** -->
+<!-- *********************************************************************************************************************************** -->
 
-## Getting started
+Zabbix natively supports changing the login screen logo and menu logos through settings in the `brand.conf.php` file. This guide will walk you through the entire process.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Contents
+- [Contents](#contents)
+- [Creating Directory Structure](#creating-directory-structure)
+- [Preparing and Uploading Logos](#preparing-and-uploading-logos)
+  - [Required Dimensions](#required-dimensions)
+  - [File Recommendations](#file-recommendations)
+  - [Uploading Files](#uploading-files)
+- [Configuring brand.conf.php](#configuring-brandconfphp)
+  - [Configuration Items Explained](#configuration-items-explained)
+- [Setting Permissions](#setting-permissions)
+- [Verifying Changes](#verifying-changes)
+- [Additional Improvements](#additional-improvements)
+  - [Adding Custom Icons and Favicon](#adding-custom-icons-and-favicon)
+  - [Tips for Success](#tips-for-success)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Creating Directory Structure
 
-## Add your files
+Create the necessary directories using the following commands:
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+```bash
+sudo mkdir -p /usr/share/zabbix/local/conf
+sudo mkdir -p /usr/share/zabbix/rebranding
 ```
-cd existing_repo
-git remote add origin https://git.initmax.cz/initMAX-Public/Zabbix-UI-Rebranding-skeleton.git
-git branch -M main
-git push -uf origin main
+
+## Preparing and Uploading Logos
+
+### Required Dimensions
+- Main logo: 114×30 px
+- Sidebar logo: 91×24 px
+- Compact sidebar logo: 24×24 px
+
+### File Recommendations
+- Preferred formats: SVG or PNG with transparent background
+- Other formats will work but may have unwanted borders
+
+### Uploading Files
+```bash
+sudo cp /path/to/your/images/*.svg /usr/share/zabbix/rebranding/
 ```
 
-## Integrate with your tools
+## Configuring brand.conf.php
 
-- [ ] [Set up project integrations](https://git.initmax.cz/initMAX-Public/Zabbix-UI-Rebranding-skeleton/-/settings/integrations)
+Create or modify the configuration file:
+```bash
+sudo nano /usr/share/zabbix/local/conf/brand.conf.php
+```
 
-## Collaborate with your team
+Insert the following content:
+```php
+<?php
+return [
+    'BRAND_LOGO' => './rebranding/your_main_logo_114x30.svg',
+    'BRAND_LOGO_SIDEBAR' => './rebranding/your_sidebar_logo_91x24.svg',
+    'BRAND_LOGO_SIDEBAR_COMPACT' => './rebranding/your_compact_logo_24x24.svg',
+    'BRAND_FOOTER' => 'Your Company',
+    'BRAND_HELP_URL' => 'https://your-website.com/'
+];
+```
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Configuration Items Explained
+- `BRAND_LOGO` - Logo displayed on the login screen
+- `BRAND_LOGO_SIDEBAR` - Logo shown in the left menu
+- `BRAND_LOGO_SIDEBAR_COMPACT` - Symbol for compact menu mode
+- `BRAND_FOOTER` - Footer text
+- `BRAND_HELP_URL` - URL for the help button
 
-## Test and Deploy
+## Setting Permissions
 
-Use the built-in continuous integration in GitLab.
+Set the correct permissions for files and folders:
+```bash
+sudo chown -R www-data:www-data /usr/share/zabbix/local/conf
+sudo chmod 755 /usr/share/zabbix/local/conf
+sudo chmod 644 /usr/share/zabbix/local/conf/brand.conf.php
+sudo chown -R www-data:www-data /usr/share/zabbix/rebranding
+sudo chmod 755 /usr/share/zabbix/rebranding
+sudo chmod 644 /usr/share/zabbix/rebranding/*
+```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## Verifying Changes
+1. Open the Zabbix web interface
+2. Clear your browser cache
+3. Verify that the changes are displayed correctly
 
-***
+> **Note**: If the icon appears twice in compact mode, this is a known bug (ZBX-23676) that has been fixed in versions pre-7.2.0alpha2 and pre-7.0.6rc1.
 
-# Editing this README
+## Additional Improvements
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Adding Custom Icons and Favicon
+- Use [RealFaviconGenerator](https://realfavicongenerator.net/) to create icons
+- Upload icons to the rebranding directory
+- For permanent changes, modify Apache or Nginx configuration
 
-## Suggestions for a good README
+This setup ensures consistent appearance in browser tabs and on mobile devices.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Tips for Success
+- Always back up your original configuration before making changes
+- Test your changes in a development environment first
+- Consider using version control for your custom branding assets
+- Keep original file copies in case you need to revert changes
+- Document any customizations made for future reference
 
-## Name
-Choose a self-explaining name for your project.
+<!-- *********************************************************************************************************************************** -->
+<!-- *** FOOTER ************************************************************************************************************************ -->
+<!-- *********************************************************************************************************************************** -->
+<br>
+<br>
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+---
+---
+<div align="center">
+    <h4>
+        <a href="https://www.initmax.com/">
+            <img alt="Static Badge" src="https://img.shields.io/badge/initMAX.com-%20?color=%231f65f4&logo=data:image/png;base64,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">
+        </a>
+        <a href="tel:+420800244442">
+            <img alt="Static Badge" src="https://img.shields.io/badge/+420%20800%20244%20442-%20?color=%231f65f4&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+        </a>
+        <a href="mailto:info@initmax.com">
+            <img alt="Static Badge" src="https://img.shields.io/badge/info@initmax.com-%20?color=%231f65f4&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACJ0lEQVR4nO3ZT4iNURjH8et/mUQRCyxQ8mdj5U+ykCw0jY1uKSsWtjaibIjEBrGy1thMhtkpCyUrFnQ1yZ+ViBQpIcR89OadmrndM/fcee/c912cb53Vvef3PL/7Puc5T++t1RKJRCKRmAGwA1cwVJF1Gds7NXFedTkba2JA9emPMTKi+tyOMdJo2pQZu1jyGmnKqRFjZLRpU71WMqg35TQ6HSPPsasnGbcAW/C4G0YyxnADy2o9AgtxBr9a5BNlZD/eBg7ZRxzqgYkBvAnk8AWHY4UW4Rr+BMTuYd0MGFiVdSRhbmLFdIS34mlA9AdOYV4XDMzBMXwNxHqNvUWDzG0T5CV2FzzMjwLav3EVfYVMNAVcieFAwPFmsLQDvb78jgiV70NsLpLwdWxq09PfB4J/wMGIGAfwLqDxCUcwK7B3NS7Ett8pHykW55+Hfs37WB94qreEGcLyQMzZOJqXeMf3yCtsaDPqPwsk9R0nsmaQn7Pj+Bb47oupzhnW4knRC3HKESVP9GSeeCsaLea3cX7iNBb0YkSpt930f98a3BXPA2yM1K73zEjTrRw6yBmf81pveZgrYyTXWJI3g7/dmNeUZWSC1s5cL2saewro1Es1kuvNz1ZBjXrpRrqBZGQy6Yl0C6m0JpNKq+zSajRtGsyHwjLX4HRe0N1RfYZjjPSrPvtia/KcajKWvbSLMjHBzDZcqsAfPEP5ynLZ2pGJRCKRSCRqcfwD3qgIY4C+hT0AAAAASUVORK5CYII=">
+        </a>
+        <br>
+        <a href="https://www.linkedin.com/company/initmax/">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=linkedin">
+        </a>&nbsp;
+        <a href="https://www.youtube.com/@initmax1">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-web?style=social&logo=youtube">
+        </a>&nbsp;
+        <a href="https://www.facebook.com/initmax">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=facebook">
+        </a>&nbsp;
+        <a href="https://www.instagram.com/initmax/">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=instagram">
+        </a>&nbsp;
+        <a href="https://twitter.com/initmax">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=x">
+        </a>&nbsp;
+        <a href="https://github.com/initmax">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%20-%20?style=social&logo=github">
+        </a>
+        <br><br><br>
+        <a>
+            <img src="./.readme/logo/agplv3.png" width="100">
+        </a>
+    </h4>
+</div>
